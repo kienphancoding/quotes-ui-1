@@ -10,3 +10,20 @@
   border-bottom: 2px solid var(--color-black);
   z-index: 1000;
 }
+
+.link {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-black);
+  padding: 20px;
+
+  &:hover {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+  }
+}
+
+.active {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
