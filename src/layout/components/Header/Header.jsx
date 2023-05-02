@@ -6,21 +6,29 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const list = [
-      { name: "Home", path: "/" },
-      { name: "Authors", path: "/authors" },
-    { name: "Topics", path: "/topics" },
+    { name: "Home", path: "/" },
+    { name: "Authors", path: "/authors" },
+    { name: "Tags", path: "/tags" },
   ];
   return (
     <div className={clsx(style.wrapper)}>
       <HeaderLogo />
       <div>
-      {list.map((item, index) => {
-        return (
-          <Link className={window.location.pathname===item.path?clsx(style.link,style.active):clsx(style.link)} key={index} to={item.path}>
-            {item.name}
-          </Link>
-        );
-      })}
+        {list.map((item, index) => {
+          return (
+            <Link
+              className={
+                window.location.pathname === item.path
+                  ? clsx(style.link, style.active)
+                  : clsx(style.link)
+              }
+              key={index}
+              to={item.path}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
       </div>
       <HeaderSearch />
     </div>
